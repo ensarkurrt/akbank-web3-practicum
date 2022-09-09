@@ -5,11 +5,15 @@
 </head>
 
 <body>
-    <label>
-        Sayı
-        <input placeholder="Bir sayı girin" type="number" id="number" onchange="oddishOrEvenish(value)">
-    </label>
-    <p>Sonuç: <b id="result">BOŞ</b></p>
+    <div
+        style="margin: auto;width: 50%;margin-top: 50vh; background-color: gainsboro; max-width: min-content;padding: 20px; border: 3px solid green;border-radius: 5px;">
+        <label>
+            Sayı
+            <input placeholder="Bir sayı girin" type="number" id="number" onchange="oddishOrEvenish(value)"
+                onkeyup="oddishOrEvenish(document.getElementById('number').value)">
+        </label>
+        <p>Sonuç: <b id="result">BOŞ</b></p>
+    </div>
 </body>
 
 <script>
