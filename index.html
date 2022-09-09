@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Patika.dev Web3 Practicum First Case</title>
+</head>
+
+<body>
+    <label>
+        Sayı
+        <input placeholder="Bir sayı girin" type="number" id="number" onchange="oddishOrEvenish(value)">
+    </label>
+    <p>Sonuç: <b id="result">BOŞ</b></p>
+</body>
+
+<script>
+    function oddishOrEvenish(value) {
+        // get result element by id for set the result
+        var resultElement = document.getElementById('result');
+
+        // divide number by digit
+        const numbers = value.split('');
+
+        // sum up the numbers
+        var result = numbers.reduce((a, b) => a + parseInt(b), 0)
+
+        // calculate result is "odd" or "even", and set result the text on page
+        resultElement.textContent = result % 2 == 1 ? "Odd" : "Even";
+    }
+
+</script>
+
+</html>
